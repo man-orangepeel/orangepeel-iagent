@@ -10,9 +10,11 @@
 - [x] SITEMAP.md créé
 - [x] COPY.md créé
 - [x] TASKS.md créé
-- [ ] Repo GitHub créé (man-orangepeel/orangepeel-iagent)
-- [ ] Next.js initialisé (`npx create-next-app@latest`)
-- [ ] BRIEF.md / SITEMAP.md / COPY.md / TASKS.md poussés à la racine du repo
+- [x] Repo GitHub créé (man-orangepeel/orangepeel-iagent)
+- [x] Next.js initialisé (`npx create-next-app@latest`)
+- [x] BRIEF.md / SITEMAP.md / COPY.md / TASKS.md poussés à la racine du repo
+- [x] npm run dev vérifié (HTTP 200 — 2026-03-31)
+- [x] Commit initial poussé sur `main` (0e031a5 — 2026-03-31)
 - [ ] Vercel connecté au repo (deploy preview actif)
 
 ## Phase 2 — Contenu & validation
