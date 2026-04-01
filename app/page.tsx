@@ -128,11 +128,39 @@ export default function Home() {
               iAgent is a foundation — not a finished product.
             </p>
             <p className="mt-3">
-              On top of this base, I run a Bitcoin layer: automated scraping of
-              selected sources, signal filtering, content generation, and direct
-              publication to Telegram. That&rsquo;s one example. The architecture
-              is open — build what fits your context.
+              The architecture is open — build what fits your context.
             </p>
+          </div>
+
+          {/* OrangePeel Flow — proof of work */}
+          <div className="mt-10 rounded-md border border-[#ed760a]/25 p-6"
+            style={{
+              background:
+                "linear-gradient(135deg, #1a1e23 0%, #1c1a15 100%)",
+            }}
+          >
+            <p className="font-[family-name:var(--font-orbitron)] text-xs tracking-widest uppercase text-[#ed760a]">
+              Proof of work
+            </p>
+            <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-[#f5f5f5]">
+              OrangePeel Flow
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/80">
+              A live pipeline powered by iAgent: automated scraping of selected
+              Bitcoin sources, signal filtering, content generation, and direct
+              publication to Telegram — every day, without intervention.
+            </p>
+            <p className="mt-2 text-sm text-[#f5f5f5]/60">
+              One example of what you can build on top of the base agent.
+            </p>
+            <a
+              href="https://t.me/OrangePeel_Flow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block border border-[#ed760a] px-6 py-2.5 text-sm font-medium text-[#ed760a] rounded-sm transition-colors hover:bg-[#ed760a]/10"
+            >
+              See OrangePeel Flow on Telegram →
+            </a>
           </div>
 
           {/* GitHub link */}
@@ -140,7 +168,7 @@ export default function Home() {
             href="https://github.com/man-orangepeel/iagent"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block text-sm font-medium text-[#ed760a] transition-colors hover:text-[#efa813]"
+            className="mt-6 inline-block text-sm font-medium text-[#ed760a] transition-colors hover:text-[#efa813]"
           >
             See the full source on GitHub →
           </a>
@@ -374,12 +402,20 @@ export default function Home() {
               GitHub
             </a>
             <a
-              href="https://orangepeel.fr"
+              href="https://www.linkedin.com/in/manuelproquin/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-[#f5f5f5]/60 transition-colors hover:text-[#f5f5f5]"
             >
-              OrangePeel
+              LinkedIn
+            </a>
+            <a
+              href="https://t.me/OrangePeel_Flow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#f5f5f5]/60 transition-colors hover:text-[#f5f5f5]"
+            >
+              OrangePeel Flow
             </a>
           </div>
           <p className="text-xs text-[#6b7280]">

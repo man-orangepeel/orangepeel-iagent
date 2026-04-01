@@ -91,10 +91,19 @@ Body: Send a document. Get the content extracted and analyzed.
 **Note bas de section**
 ```
 iAgent is a foundation — not a finished product.
+The architecture is open — build what fits your context.
+```
 
-On top of this base, I run a Bitcoin layer: automated scraping of selected sources,
-signal filtering, content generation, and direct publication to Telegram.
-That's one example. The architecture is open — build what fits your context.
+**Proof of work — OrangePeel Flow**
+```
+Label: Proof of work
+Title: OrangePeel Flow
+Body: A live pipeline powered by iAgent: automated scraping of selected
+      Bitcoin sources, signal filtering, content generation, and direct
+      publication to Telegram — every day, without intervention.
+      One example of what you can build on top of the base agent.
+CTA: See OrangePeel Flow on Telegram →
+Link: https://t.me/OrangePeel_Flow
 ```
 
 **Lien bas de section**
@@ -245,8 +254,11 @@ Check your inbox. The runbook is on its way.
 Nothing changes — the runbook is still on its way.
 And yes, let's talk Bitcoin.
 
-LinkedIn → linkedin.com/in/manuelproquin
-Telegram → t.me/OrangePeel_Flow
+OrangePeel Flow is a live pipeline powered by iAgent — Bitcoin news,
+filtered and published daily to Telegram. See what the agent can do.
+
+CTA primaire: OrangePeel Flow → t.me/OrangePeel_Flow
+CTA secondaire: LinkedIn → linkedin.com/in/manuelproquin
 ```
 
 ---
@@ -261,7 +273,8 @@ Built by OrangePeel. Open source. Anthropic only.
 **Liens**
 ```
 GitHub — github.com/man-orangepeel/iagent
-OrangePeel — orangepeel.fr
+LinkedIn — linkedin.com/in/manuelproquin
+OrangePeel Flow — t.me/OrangePeel_Flow
 ```
 
 **Copyright**

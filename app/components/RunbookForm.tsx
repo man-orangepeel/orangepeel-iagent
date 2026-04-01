@@ -59,22 +59,27 @@ export default function RunbookForm() {
               <br />
               And yes, let&rsquo;s talk Bitcoin.
             </p>
+            <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/60">
+              OrangePeel Flow is a live pipeline powered by iAgent — Bitcoin
+              news, filtered and published daily to Telegram. See what the
+              agent can do.
+            </p>
             <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <a
-                href="https://www.linkedin.com/in/manuelproquin/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#ed760a] px-8 py-3 text-sm font-bold text-black rounded-sm transition-colors hover:bg-[#efa813]"
-              >
-                LinkedIn →
-              </a>
               <a
                 href="https://t.me/OrangePeel_Flow"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="inline-block bg-[#ed760a] px-8 py-3 text-sm font-bold text-black rounded-sm transition-colors hover:bg-[#efa813]"
+              >
+                OrangePeel Flow →
+              </a>
+              <a
+                href="https://www.linkedin.com/in/manuelproquin/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block border border-[#f5f5f5]/30 px-8 py-3 text-sm font-medium text-[#f5f5f5] rounded-sm transition-colors hover:border-[#f5f5f5]/60"
               >
-                Telegram →
+                LinkedIn →
               </a>
             </div>
           </div>
