@@ -2,25 +2,25 @@
 
 import { useState } from "react";
 
-type Profile = "tech" | "non-tech" | "bitcoin";
+type Intention = "install" | "migrate";
 type FormState = "idle" | "submitting" | "success";
 
-const radioOptions: { value: Profile; label: string }[] = [
-  { value: "tech", label: "I'm technical — show me the code" },
-  { value: "non-tech", label: "I'm not technical — I just want it to work" },
-  { value: "bitcoin", label: "I work in Bitcoin" },
+const intentionOptions: { value: Intention; label: string }[] = [
+  { value: "install", label: "Install iAgent from scratch" },
+  { value: "migrate", label: "Migrate from OpenClaw" },
 ];
 
 export default function RunbookForm() {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
-  const [profile, setProfile] = useState<Profile | "">("");
+  const [intention, setIntention] = useState<Intention | "">("");
+  const [bitcoin, setBitcoin] = useState(false);
   const [state, setState] = useState<FormState>("idle");
-  const [submittedProfile, setSubmittedProfile] = useState<Profile | "">("");
+  const [submittedBitcoin, setSubmittedBitcoin] = useState(false);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email || !profile) return;
+    if (!email || !intention) return;
 
     setState("submitting");
 
@@ -28,11 +28,11 @@ export default function RunbookForm() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstName, email, profile }),
+        body: JSON.stringify({ firstName, email, intention, bitcoin }),
       });
 
       if (res.ok) {
-        setSubmittedProfile(profile);
+        setSubmittedBitcoin(bitcoin);
         setState("success");
       } else {
         setState("idle");
@@ -40,37 +40,6 @@ export default function RunbookForm() {
     } catch {
       setState("idle");
     }
-  }
-
-  if (state === "success" && submittedProfile === "bitcoin") {
-    return (
-      <div className="text-center">
-        <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#f5f5f5]">
-          Let&rsquo;s talk directly.
-        </h3>
-        <p className="mt-4 text-sm leading-relaxed text-[#f5f5f5]/80">
-          No calendar links. No forms. Reach me on LinkedIn or Telegram.
-        </p>
-        <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <a
-            href="https://www.linkedin.com/in/manuelproquin/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#ed760a] px-8 py-3 text-sm font-bold text-black rounded-sm transition-colors hover:bg-[#efa813]"
-          >
-            LinkedIn →
-          </a>
-          <a
-            href="https://t.me/OrangePeel_Flow"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block border border-[#f5f5f5]/30 px-8 py-3 text-sm font-medium text-[#f5f5f5] rounded-sm transition-colors hover:border-[#f5f5f5]/60"
-          >
-            Telegram →
-          </a>
-        </div>
-      </div>
-    );
   }
 
   if (state === "success") {
@@ -82,6 +51,34 @@ export default function RunbookForm() {
         <p className="mt-4 text-sm leading-relaxed text-[#f5f5f5]/80">
           The runbook is on its way.
         </p>
+
+        {submittedBitcoin && (
+          <div className="mt-8 rounded-md border border-[#ed760a]/30 bg-[#0d0d0d] p-6">
+            <p className="text-sm font-medium text-[#f5f5f5]/70">
+              Nothing changes — the runbook is still on its way.
+              <br />
+              And yes, let&rsquo;s talk Bitcoin.
+            </p>
+            <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a
+                href="https://www.linkedin.com/in/manuelproquin/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#ed760a] px-8 py-3 text-sm font-bold text-black rounded-sm transition-colors hover:bg-[#efa813]"
+              >
+                LinkedIn →
+              </a>
+              <a
+                href="https://t.me/OrangePeel_Flow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border border-[#f5f5f5]/30 px-8 py-3 text-sm font-medium text-[#f5f5f5] rounded-sm transition-colors hover:border-[#f5f5f5]/60"
+              >
+                Telegram →
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -118,32 +115,32 @@ export default function RunbookForm() {
         />
       </label>
 
-      {/* Profile radio */}
+      {/* Intention radio */}
       <fieldset className="mt-5">
         <legend className="text-sm text-[#f5f5f5]/80">
-          I am... <span className="text-[#ed760a]">*</span>
+          I want to... <span className="text-[#ed760a]">*</span>
         </legend>
         <div className="mt-3 space-y-3">
-          {radioOptions.map(({ value, label }) => (
+          {intentionOptions.map(({ value, label }) => (
             <label key={value} className="flex cursor-pointer items-center gap-3">
               <span className="relative flex h-5 w-5 items-center justify-center">
                 <span
                   className={`block h-5 w-5 rounded-full border-2 transition-colors ${
-                    profile === value
+                    intention === value
                       ? "border-[#ed760a]"
                       : "border-white/20"
                   }`}
                 />
-                {profile === value && (
+                {intention === value && (
                   <span className="absolute h-2.5 w-2.5 rounded-full bg-[#ed760a]" />
                 )}
                 <input
                   type="radio"
-                  name="profile"
+                  name="intention"
                   value={value}
                   required
-                  checked={profile === value}
-                  onChange={() => setProfile(value)}
+                  checked={intention === value}
+                  onChange={() => setIntention(value)}
                   className="sr-only"
                 />
               </span>
@@ -152,6 +149,42 @@ export default function RunbookForm() {
           ))}
         </div>
       </fieldset>
+
+      {/* Bitcoin checkbox */}
+      <label className="mt-5 flex cursor-pointer items-center gap-3">
+        <span className="relative flex h-5 w-5 items-center justify-center">
+          <span
+            className={`block h-5 w-5 rounded-sm border-2 transition-colors ${
+              bitcoin ? "border-[#ed760a] bg-[#ed760a]" : "border-white/20"
+            }`}
+          />
+          {bitcoin && (
+            <svg
+              className="absolute h-3 w-3 text-black"
+              viewBox="0 0 12 12"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 6l3 3 5-5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+          <input
+            type="checkbox"
+            checked={bitcoin}
+            onChange={(e) => setBitcoin(e.target.checked)}
+            className="sr-only"
+          />
+        </span>
+        <span className="text-sm text-[#f5f5f5]/80">
+          I&rsquo;m into Bitcoin — happy to connect on that too
+        </span>
+      </label>
 
       {/* Submit */}
       <button

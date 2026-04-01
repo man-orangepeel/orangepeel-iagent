@@ -1,20 +1,20 @@
 import { NextResponse } from "next/server";
 
 // TODO: Integrate Brevo API here
-// - Tech / Non-tech profiles → send runbook .md via Brevo transactional email + enroll in bootcamp sequence
-// - Bitcoin company profile → no email needed (redirect handled client-side)
+// - Use "intention" field (install / migrate) to choose the correct Brevo template
+// - If bitcoin is true, tag the contact in Brevo for Bitcoin-specific follow-up
 
 export async function POST(request: Request) {
-  const { firstName, email, profile } = await request.json();
+  const { firstName, email, intention, bitcoin } = await request.json();
 
-  if (!email || !profile) {
+  if (!email || !intention) {
     return NextResponse.json(
-      { error: "Email and profile are required" },
+      { error: "Email and intention are required" },
       { status: 400 },
     );
   }
 
-  console.log("[subscribe]", { firstName, email, profile });
+  console.log("[subscribe]", { firstName, email, intention, bitcoin });
 
   return NextResponse.json({ success: true });
 }

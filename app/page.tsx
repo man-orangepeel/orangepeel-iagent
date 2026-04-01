@@ -3,24 +3,24 @@ import RunbookForm from "./components/RunbookForm";
 
 const capabilities = [
   {
+    icon: Mail,
+    title: "Email & Calendar",
+    body: "Ask iAgent to pull your unread emails or check your calendar. On demand, authenticated via Google — no data stored externally.",
+  },
+  {
     icon: Sun,
     title: "Morning Brief",
-    body: "Every morning at 7:45, a structured digest on your phone — agenda, unread emails, priorities. Before you open your laptop.",
+    body: "Every morning, a structured digest on your phone — agenda, unread emails, priorities. Before you open your laptop. Scheduling and reminders are configurable.",
   },
   {
     icon: Mic,
-    title: "Voice Transcription",
-    body: "Send a voice message on Telegram. iAgent transcribes it locally via Whisper — no cloud, no third party.",
+    title: "Voice",
+    body: "Send a voice message instead of typing. iAgent transcribes it and acts on your instructions — the same way it would with text.",
   },
   {
     icon: FileText,
-    title: "PDF & DOCX Processing",
-    body: "Send a document. Get the content extracted and analyzed. Handled natively — no copy-paste, no upload to external services.",
-  },
-  {
-    icon: Mail,
-    title: "Email & Calendar",
-    body: "Reads your Gmail and Google Calendar on demand. OAuth-authenticated, tokens stored in your macOS Keychain.",
+    title: "PDF & Documents",
+    body: "Send a document. Get the content extracted and analyzed. No manual copy-paste, no upload to external services.",
   },
 ] as const;
 
@@ -44,7 +44,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-3xl">
           {/* Eyebrow */}
           <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
-            Open Source · No API Cost · Your Data Stays on Your Machine
+            Open Source · No API Cost · Anthropic Only
           </p>
 
           {/* H1 */}
@@ -57,8 +57,8 @@ export default function Home() {
           {/* Subheadline */}
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/85">
             A personal AI agent — open, auditable, free to run if you already
-            have Claude Pro or Max. No black box. No third-party intermediaries.
-            Anthropic only. Built and running in production.
+            have a Claude subscription. No black box. No third-party
+            intermediaries. Built and running in production.
           </p>
 
           {/* CTAs */}
@@ -81,7 +81,7 @@ export default function Home() {
 
           {/* Credibility line */}
           <p className="mt-8 text-sm tracking-wide text-[#f5f5f5]/70">
-            Evolved from OpenClaw · 100% open source · Zero API cost · Your machine, your data
+            Evolved from OpenClaw · 100% open source · Zero API cost · Anthropic only
           </p>
         </div>
       </section>
@@ -91,17 +91,17 @@ export default function Home() {
         <div className="mx-auto max-w-5xl">
           {/* Section label */}
           <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
-            Capabilities
+            In production — every day
           </p>
 
           {/* Section headline */}
           <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
-            What iAgent does — every day, on my machine.
+            What iAgent does — on my machine.
           </h2>
 
           {/* Section subheadline */}
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/85">
-            This isn&rsquo;t a demo. These are the automations running in production.
+            This isn&rsquo;t a demo. These are automations running in production.
           </p>
 
           {/* Cards grid */}
@@ -123,14 +123,17 @@ export default function Home() {
           </div>
 
           {/* Bottom note */}
-          <p className="mt-12 text-sm italic leading-relaxed text-[#f5f5f5]/60">
-            This is what iAgent does on my machine, every day.
-            <br />
-            The Bitcoin monitoring layer runs on top of this — built by me, not
-            included.
-            <br />
-            That&rsquo;s the point: iAgent is the foundation. You extend it.
-          </p>
+          <div className="mt-12 text-sm leading-relaxed text-[#f5f5f5]/60">
+            <p className="font-medium text-[#f5f5f5]/70">
+              iAgent is a foundation — not a finished product.
+            </p>
+            <p className="mt-3">
+              On top of this base, I run a Bitcoin layer: automated scraping of
+              selected sources, signal filtering, content generation, and direct
+              publication to Telegram. That&rsquo;s one example. The architecture
+              is open — build what fits your context.
+            </p>
+          </div>
 
           {/* GitHub link */}
           <a
@@ -161,15 +164,16 @@ export default function Home() {
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/85">
             iAgent started as an OpenClaw user&rsquo;s frustration. Same
             philosophy — your own agent, your own data. Different execution: open
-            code, zero API cost, documented security.
+            code, zero API cost, real security.
           </p>
 
           {/* Security context */}
           <div className="mt-10 rounded-md border border-white/10 bg-[#1a1e23] p-5">
             <p className="text-sm leading-relaxed text-[#c9cdd3]">
               OpenClaw has had security incidents. Your conversations transited
-              their servers. With iAgent: the code is 100% readable, the surface
-              area is minimal, and a 35-point security audit runs in one command.
+              their servers. With iAgent: every line of code is readable, Bash
+              commands are whitelisted, and a full security audit runs in one
+              command.
             </p>
           </div>
 
@@ -191,15 +195,13 @@ export default function Home() {
               </thead>
               <tbody className="text-[#c9cdd3]">
                 {[
-                  ["LLM cost", "Paid API keys (per token)", "Zero — uses your Claude Pro/Max subscription"],
+                  ["LLM cost", "Paid API keys (per token)", "Zero — uses your Claude subscription"],
                   ["Code", "Closed (macOS app + Node.js)", "100% open, Python, readable line by line"],
-                  ["Your data", "Transits OpenClaw servers", "Anthropic only — no additional intermediaries"],
-                  ["Security", "Black box, past incidents", "35-point audit, whitelisted commands, open to inspect"],
+                  ["Data routing", "Transits OpenClaw servers + third parties", "Anthropic only — no additional intermediaries"],
+                  ["Security", "Black box, past incidents", "Audit-ready: 35 checks, whitelisted commands"],
+                  ["Prompt injection", "No protection", "Built-in detection module"],
+                  ["Bash access", "Unrestricted", "Whitelisted only (rm, sudo, curl: blocked)"],
                   ["Dependencies", "Node.js, npm, proprietary gateway", "Python + Claude CLI — that's it"],
-                  ["Bash access", "Unrestricted", "Whitelisted commands only (rm, sudo, curl: blocked)"],
-                  ["Documentation", "Minimal", "Full runbook — install + migration"],
-                  ["Identity init", "Manual", "Guided (agent configures itself, deletes bootstrap)"],
-                  ["Maintenance", "Inactive", "Active (OrangePeel)"],
                 ].map(([feature, openclaw, iagent]) => (
                   <tr key={feature} className="border-b border-white/5">
                     <td className="py-3 pr-6 font-medium text-[#f5f5f5]">
@@ -232,7 +234,7 @@ export default function Home() {
                 href="#get-runbook"
                 className="mt-2 inline-block border border-[#f5f5f5]/30 px-8 py-3 text-sm font-medium text-[#f5f5f5] rounded-sm transition-colors hover:border-[#f5f5f5]/60"
               >
-                Install from zero →
+                Get started →
               </a>
             </div>
           </div>
@@ -244,73 +246,87 @@ export default function Home() {
         <div className="mx-auto max-w-5xl">
           {/* Section label */}
           <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
-            Audience
+            Get started
           </p>
 
           {/* Section headline */}
           <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
-            If you have a Mac and a Claude subscription — you can run this.
+            Three ways in.
           </h2>
 
           {/* Section subheadline */}
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/85">
-            The runbook handles the technical setup. You don&rsquo;t need to be a
-            developer.
+            All you need: a Mac and a Claude subscription.
           </p>
 
-          {/* Audience cards */}
-          <div className="mt-14 grid gap-6 sm:grid-cols-2">
-            {/* Card A — Tech / Bitcoin */}
-            <div className="rounded-md border border-[#ed760a]/30 bg-[#111518] p-6">
+          {/* 3 cards — progressive emphasis left → right */}
+          <div className="mt-14 grid gap-6 sm:grid-cols-3">
+            {/* Card 1 — Do it yourself (most discreet) */}
+            <div className="flex flex-col rounded-md border border-white/10 bg-[#111518] p-6">
               <h3 className="font-[family-name:var(--font-orbitron)] text-sm font-medium tracking-wide text-[#f5f5f5]">
-                You build or evaluate AI systems.
+                I&rsquo;ll set it up myself.
               </h3>
-              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#f5f5f5]/80">
-                <li>
-                  — You want to see real agent architecture — no framework, no
-                  abstraction
-                </li>
-                <li>
-                  — You&rsquo;re considering what OrangePeel can build for your
-                  stack
-                </li>
-                <li>
-                  — iAgent is the proof of work. The Bitcoin monitoring layer is
-                  in production on top of it.
-                </li>
-              </ul>
-              <a
-                href="#get-runbook"
-                className="mt-6 inline-block bg-[#ed760a] px-8 py-3 text-sm font-bold text-black rounded-sm transition-colors hover:bg-[#efa813]"
-              >
-                Let&rsquo;s talk →
-              </a>
+              <p className="mt-4 text-sm leading-relaxed text-[#f5f5f5]/60">
+                The install guide is in the public repo. Step-by-step, no
+                automation required.
+              </p>
+              <div className="mt-auto pt-6">
+                <a
+                  href="https://github.com/man-orangepeel/iagent/blob/main/docs/install/guide-installation.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#f5f5f5]/50 transition-colors hover:text-[#f5f5f5]/80"
+                >
+                  Read the guide →
+                </a>
+              </div>
             </div>
 
-            {/* Card B — Non-tech / Executive */}
-            <div className="rounded-md border border-white/10 bg-[#111518] p-6">
-              <h3 className="font-[family-name:var(--font-orbitron)] text-sm font-medium tracking-wide text-[#f5f5f5]">
-                You want an AI agent — without becoming a developer.
+            {/* Card 2 — Guided install (intermediate) */}
+            <div
+              className="flex flex-col rounded-md border border-[#ed760a]/25 p-6"
+              style={{
+                background:
+                  "linear-gradient(135deg, #1a1e23 0%, #1c1a15 100%)",
+              }}
+            >
+              <h3 className="font-[family-name:var(--font-orbitron)] text-base font-medium tracking-wide text-[#f5f5f5]">
+                I want it automated.
               </h3>
-              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#f5f5f5]/80">
-                <li>
-                  — You have a Mac and a Claude Pro or Max subscription
-                </li>
-                <li>
-                  — You&rsquo;re comfortable opening a terminal once, with a
-                  guide
-                </li>
-                <li>
-                  — After that: your agent runs, briefs you, reads your emails —
-                  every day, automatically
-                </li>
-              </ul>
-              <a
-                href="#get-runbook"
-                className="mt-6 inline-block border border-[#f5f5f5]/30 px-8 py-3 text-sm font-medium text-[#f5f5f5] rounded-sm transition-colors hover:border-[#f5f5f5]/60"
-              >
-                Get the free Runbook →
-              </a>
+              <p className="mt-4 text-sm leading-relaxed text-[#f5f5f5]/70">
+                Get the runbook — Claude Code handles the setup. You validate the
+                key steps. That&rsquo;s it.
+              </p>
+              <div className="mt-auto pt-6">
+                <a
+                  href="#get-runbook"
+                  className="inline-block border border-[#ed760a] px-8 py-3 text-sm font-medium text-[#ed760a] rounded-sm transition-colors hover:bg-[#ed760a]/10"
+                >
+                  Get the Runbook →
+                </a>
+              </div>
+            </div>
+
+            {/* Card 3 — Bootcamp (most prominent) */}
+            <div className="flex flex-col rounded-md border border-[#ed760a]/40 bg-[#1a1200] p-6">
+              <h3 className="font-[family-name:var(--font-orbitron)] text-base font-medium tracking-wide text-[#ed760a]">
+                I want something more powerful.
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-[#f5f5f5]/80">
+                The AI Chief of Staff Bootcamp guides you in 4 weeks. Custom to
+                your role, your tools, your context. No technical background
+                required.
+              </p>
+              <div className="mt-auto pt-6">
+                <a
+                  href="https://aichiefofstaffbootcamp.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#ed760a] px-8 py-3 text-sm font-bold text-black rounded-sm transition-colors hover:bg-[#efa813]"
+                >
+                  Discover the Bootcamp →
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -331,9 +347,8 @@ export default function Home() {
 
           {/* Section subheadline */}
           <p className="mt-4 text-lg leading-relaxed text-[#f5f5f5]/85">
-            Step-by-step installation guide. Migration path from OpenClaw. Works
-            if you&rsquo;re technical. Works if you&rsquo;re not. Delivered to
-            your inbox immediately.
+            Claude Code installs iAgent for you — step by step. Enter your
+            email. Receive the runbook. Open it with Claude Code.
           </p>
 
           {/* Form */}
@@ -347,8 +362,7 @@ export default function Home() {
       <footer className="border-t border-white/10 px-6 py-12">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
           <p className="text-sm text-[#f5f5f5]/70">
-            Built by OrangePeel. Open source. Anthropic only — no third-party
-            intermediaries.
+            Built by OrangePeel. Open source. Anthropic only.
           </p>
           <div className="flex items-center gap-6">
             <a
