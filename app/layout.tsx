@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "iAgent by OrangePeel",
     description:
-      "Real AI agent infrastructure. No framework. No SaaS. Built and running in production.",
+      "Real AI agent infrastructure. No framework. No SaaS. Anthropic only — no third-party intermediaries.",
   },
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
         <nav className="sticky top-0 z-50 border-b border-white/5 bg-[#0d0d0d]/90 backdrop-blur-md">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <a
-              href="#hero"
+              href="#"
               className="font-[family-name:var(--font-orbitron)] text-sm font-bold tracking-wider text-[#f5f5f5]"
             >
               iAgent
