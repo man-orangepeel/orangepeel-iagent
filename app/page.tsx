@@ -1,4 +1,5 @@
 import { Sun, Mic, FileText, Mail } from "lucide-react";
+import RunbookForm from "./components/RunbookForm";
 
 const capabilities = [
   {
@@ -237,6 +238,141 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* WHO IS THIS FOR */}
+      <section id="who-is-this-for" className="px-6 py-20 sm:py-28">
+        <div className="mx-auto max-w-5xl">
+          {/* Section label */}
+          <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
+            Audience
+          </p>
+
+          {/* Section headline */}
+          <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
+            If you have a Mac and a Claude subscription — you can run this.
+          </h2>
+
+          {/* Section subheadline */}
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/85">
+            The runbook handles the technical setup. You don&rsquo;t need to be a
+            developer.
+          </p>
+
+          {/* Audience cards */}
+          <div className="mt-14 grid gap-6 sm:grid-cols-2">
+            {/* Card A — Tech / Bitcoin */}
+            <div className="rounded-md border border-[#ed760a]/30 bg-[#111518] p-6">
+              <h3 className="font-[family-name:var(--font-orbitron)] text-sm font-medium tracking-wide text-[#f5f5f5]">
+                You build or evaluate AI systems.
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#f5f5f5]/80">
+                <li>
+                  — You want to see real agent architecture — no framework, no
+                  abstraction
+                </li>
+                <li>
+                  — You&rsquo;re considering what OrangePeel can build for your
+                  stack
+                </li>
+                <li>
+                  — iAgent is the proof of work. The Bitcoin monitoring layer is
+                  in production on top of it.
+                </li>
+              </ul>
+              <a
+                href="#get-runbook"
+                className="mt-6 inline-block bg-[#ed760a] px-8 py-3 text-sm font-bold text-black rounded-sm transition-colors hover:bg-[#efa813]"
+              >
+                Let&rsquo;s talk →
+              </a>
+            </div>
+
+            {/* Card B — Non-tech / Executive */}
+            <div className="rounded-md border border-white/10 bg-[#111518] p-6">
+              <h3 className="font-[family-name:var(--font-orbitron)] text-sm font-medium tracking-wide text-[#f5f5f5]">
+                You want an AI agent — without becoming a developer.
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#f5f5f5]/80">
+                <li>
+                  — You have a Mac and a Claude Pro or Max subscription
+                </li>
+                <li>
+                  — You&rsquo;re comfortable opening a terminal once, with a
+                  guide
+                </li>
+                <li>
+                  — After that: your agent runs, briefs you, reads your emails —
+                  every day, automatically
+                </li>
+              </ul>
+              <a
+                href="#get-runbook"
+                className="mt-6 inline-block border border-[#f5f5f5]/30 px-8 py-3 text-sm font-medium text-[#f5f5f5] rounded-sm transition-colors hover:border-[#f5f5f5]/60"
+              >
+                Get the free Runbook →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GET THE RUNBOOK */}
+      <section id="get-runbook" className="bg-[#111518] px-6 py-20 sm:py-28">
+        <div className="mx-auto max-w-2xl text-center">
+          {/* Section label */}
+          <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
+            Runbook
+          </p>
+
+          {/* Section headline */}
+          <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
+            Get the Runbook. It&rsquo;s free.
+          </h2>
+
+          {/* Section subheadline */}
+          <p className="mt-4 text-lg leading-relaxed text-[#f5f5f5]/85">
+            Step-by-step installation guide. Migration path from OpenClaw. Works
+            if you&rsquo;re technical. Works if you&rsquo;re not. Delivered to
+            your inbox immediately.
+          </p>
+
+          {/* Form */}
+          <div className="mt-10">
+            <RunbookForm />
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 px-6 py-12">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
+          <p className="text-sm text-[#f5f5f5]/70">
+            Built by OrangePeel. Open source. Anthropic only — no third-party
+            intermediaries.
+          </p>
+          <div className="flex items-center gap-6">
+            <a
+              href="https://github.com/man-orangepeel/iagent"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#f5f5f5]/60 transition-colors hover:text-[#f5f5f5]"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://orangepeel.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#f5f5f5]/60 transition-colors hover:text-[#f5f5f5]"
+            >
+              OrangePeel
+            </a>
+          </div>
+          <p className="text-xs text-[#6b7280]">
+            © OrangePeel. Open source under MIT License.
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
