@@ -1,5 +1,6 @@
 # SITEMAP — orangepeel-iagent.fr
 > Architecture détaillée section par section.
+> Dernière mise à jour : 2026-04-02 — aligné sur l'état réel du site déployé.
 > Langue : anglais intégral. One-page avec ancres.
 
 ---
@@ -9,110 +10,95 @@
 ```
 /
 ├── #hero
-├── #what-it-does
-├── #vs-openclaw
-├── #who-is-this-for
-├── #get-runbook       ← formulaire Tally embarqué
-└── footer
+├── #what-it-does         ← 4 capability cards + OrangePeel Flow proof of work
+├── #vs-openclaw           ← tableau comparatif + 2 CTA (migrate / install)
+├── #who-is-this-for       ← 3 cards progressives (DIY / Runbook / Bootcamp)
+├── #get-runbook           ← formulaire natif Next.js → API Brevo
+└── footer                 ← GitHub · LinkedIn · OrangePeel Flow
 ```
 
 ---
 
 ## Section 1 — Hero `#hero`
 
-**Objectif :** capter l'attention des deux audiences en < 5 secondes. Poser iAgent comme proof of work sérieux.
+**Objectif :** capter l'attention en < 5 secondes. Poser iAgent comme proof of work sérieux.
 
 ### Éléments
 
 | Élément | Contenu |
 |---|---|
-| Eyebrow | `Open Source · Built Without a Framework · Running in Production` |
-| H1 | À définir dans COPY.md |
-| Subheadline | 2 lignes max — ce que c'est + pour qui |
-| CTA primaire | `Get the Runbook` → ancre `#get-runbook` |
-| CTA secondaire | `View on GitHub` → https://github.com/man-orangepeel/iagent (target _blank) |
-| Signal de crédibilité | Badge ou ligne : "Migrated from OpenClaw · Built by OrangePeel" |
+| Eyebrow | `Open Source · No API Cost · Anthropic Only` |
+| H1 | `OpenClaw was the idea. iAgent is what it should have been.` |
+| Subheadline | Personal AI agent, open, auditable, free with Claude subscription |
+| CTA primaire | `Get the Runbook →` → ancre `#get-runbook` |
+| CTA secondaire | `View on GitHub →` → https://github.com/man-orangepeel/iagent |
+| Signal de crédibilité | `Evolved from OpenClaw · 100% open source · Zero API cost · Anthropic only` |
 
-### Notes design
-- Fond sombre recommandé (crédibilité tech)
-- Pas de hero image générique IA
-- Optionnel : extrait de code ou log terminal en arrière-plan
+### Design
+- Fond sombre avec gradient radial orange en glow
+- Police Playfair pour H1, Orbitron pour eyebrow
 
 ---
 
 ## Section 2 — What it does `#what-it-does`
 
-**Objectif :** prouver concrètement ce que l'agent fait. Proof of work visible. Audience tech ET non-tech.
+**Objectif :** prouver concrètement ce que l'agent fait. Proof of work visible.
 
-### Éléments
+### 4 capability cards (grille 2x2)
 
-4 capabilities en cards ou liste visuelle :
+| # | Icon | Titre | Description |
+|---|---|---|---|
+| 1 | Mail | Email & Calendar | Pull unread emails, check calendar — on demand via Google |
+| 2 | Sun | Morning Brief | Structured digest every morning — agenda, emails, priorities |
+| 3 | Mic | Voice | Voice message → transcription → action |
+| 4 | FileText | PDF & Documents | Document extraction and analysis, no external upload |
 
-| # | Capability | Description courte |
-|---|---|---|
-| 1 | **Morning Brief** | Every morning, a structured briefing delivered to your phone — news, tasks, priorities |
-| 2 | **Voice Output** | Text-to-speech summaries you can listen to without opening a screen |
-| 3 | **PDF Processing** | Reads and summarizes documents automatically, no manual copy-paste |
-| 4 | **Bitcoin Newsletter** | Monitors Bitcoin sources, filters signal from noise, routes to Telegram |
+### OrangePeel Flow — Proof of work (encart mis en valeur)
 
-### Notes
-- Chaque card : icône + titre + 1-2 phrases
-- Pas de bullet hell — densité maîtrisée
-- Un label discret : "This is what iAgent does on my machine, every day."
-- Lien GitHub en fin de section pour le profil tech : "See the source →"
+Encart avec bordure orange, gradient subtil :
+- Label : `Proof of work`
+- Titre : `OrangePeel Flow`
+- Description : pipeline Bitcoin automatisé (scraping, filtrage, publication Telegram)
+- CTA : `See OrangePeel Flow on Telegram →` → https://t.me/OrangePeel_Flow
+
+### Lien bas de section
+`See the full source on GitHub →`
 
 ---
 
 ## Section 3 — iAgent vs OpenClaw `#vs-openclaw`
 
-**Objectif :** capturer le trafic OpenClaw, montrer l'évolution, créer deux entrées funnel distinctes.
+**Objectif :** capturer le trafic OpenClaw, montrer l'évolution.
 
-### Intro copy
-Courte accroche (2 lignes) reconnaissant OpenClaw comme point de départ, positionnant iAgent comme l'étape suivante.
-
-### Tableau comparatif
+### Tableau comparatif (7 lignes)
 
 | Feature | OpenClaw | iAgent |
 |---|---|---|
-| Architecture | Monolithic | Modular |
-| Documentation | Minimal | Full runbook (install + migration) |
-| Security approach | Basic | Hardened (whitelist, file size checks) |
-| Pagination handling | None | Built-in |
-| Identity initialization | Manual | Guided (BOOTSTRAP.md → self-deletes) |
-| Brief scheduling | Hardcoded | launchd plist (configurable) |
-| Migration path | N/A | Documented guide |
-| Maintenance | Abandoned / community | Active (OrangePeel) |
+| LLM cost | Paid API keys (per token) | Zero — uses your Claude subscription |
+| Code | Closed (macOS app + Node.js) | 100% open, Python, readable |
+| Data routing | Transits OpenClaw servers + third parties | Anthropic only |
+| Security | Black box, past incidents | Audit-ready: 35 checks, whitelisted commands |
+| Prompt injection | No protection | Built-in detection module |
+| Bash access | Unrestricted | Whitelisted only |
+| Dependencies | Node.js, npm, proprietary gateway | Python + Claude CLI |
 
-> Note : adapter les lignes aux différences réelles du repo avant le build.
-
-### Deux CTA distincts sous le tableau
-
-| Profil | CTA | Action |
-|---|---|---|
-| **Coming from OpenClaw** | `Migrate to iAgent →` | Ancre `#get-runbook` (précoche "Tech") |
-| **Starting from scratch** | `Install from zero →` | Ancre `#get-runbook` (précoche "Non-tech") |
+### 2 CTA sous le tableau
+- Gauche : `Already on OpenClaw?` → `Migrate to iAgent →`
+- Droite : `Starting from scratch?` → `Get started →`
 
 ---
 
 ## Section 4 — Who is this for `#who-is-this-for`
 
-**Objectif :** bifurcation explicite des audiences. Chacune doit se reconnaître et savoir quoi faire.
+**Objectif :** 3 niveaux d'engagement progressifs.
 
-### Structure : 2 colonnes ou 2 cards
+### 3 cards (emphase croissante gauche → droite)
 
-**Card A — Technical / Bitcoin companies**
-- Titre : `You build or operate AI systems`
-- Bullet 1 : You want to see how a real agent is architected without a framework
-- Bullet 2 : You're evaluating whether OrangePeel can build something for your stack
-- Bullet 3 : You want the raw code, not a pitch deck
-- CTA : `Let's talk →` → ancre `#get-runbook` (précoche "Bitcoin company") — post-soumission : page de remerciement avec liens LinkedIn + Telegram
-
-**Card B — Non-technical / Executives**
-- Titre : `You want AI working for you, not more tools to manage`
-- Bullet 1 : You've heard about AI agents but don't know where to start
-- Bullet 2 : You want a concrete, step-by-step guide to deploy your own
-- Bullet 3 : You're considering delegating AI operations entirely
-- CTA : `Get the free Runbook →` → ancre `#get-runbook`
+| Card | Titre | CTA | Style |
+|---|---|---|---|
+| A — DIY | I'll set it up myself. | `Read the guide →` (lien GitHub) | Discret, border white/10 |
+| B — Runbook | I want it automated. | `Get the Runbook →` (ancre) | Intermédiaire, border orange |
+| C — Bootcamp | I want something more powerful. | `Discover the Bootcamp →` (lien externe) | Prominent, fond sombre doré |
 
 ---
 
@@ -120,66 +106,92 @@ Courte accroche (2 lignes) reconnaissant OpenClaw comme point de départ, positi
 
 **Objectif :** collecter email + qualifier le profil. Point de conversion unique.
 
-### Headline
-`One system. Two paths.` ou `Get the Runbook — It's free.`
+### Formulaire natif (composant RunbookForm.tsx)
 
-### Sous-headline
-1 phrase : ce que contient le runbook (installation step-by-step, migration depuis OpenClaw, configuration).
+| Champ | Type | Requis |
+|---|---|---|
+| First name | text | non |
+| Email address | email | oui |
+| I want to... | radio (install / migrate) | oui |
+| Bitcoin | checkbox | non |
 
-### Formulaire Tally (iframe embarqué)
+### Post-soumission
+- Message : `Check your inbox. The runbook is on its way.`
+- Si bitcoin coché : encart orange avec :
+  - `And yes, let's talk Bitcoin.` (en orange, gras)
+  - Description OrangePeel Flow
+  - `Want to connect? Reach out on LinkedIn.`
+  - CTA primaire : `OrangePeel Flow` (icône Telegram) → t.me/OrangePeel_Flow
+  - CTA secondaire : `LinkedIn` (icône LinkedIn) → linkedin.com/in/manuelproquin
 
-3 champs :
-1. **First name** (text)
-2. **Email** (email, requis)
-3. **I am...** (single choice)
-   - `A developer or technical person`
-   - `A non-technical executive or manager`
-   - `Representing a Bitcoin company`
+### Backend — API route `app/api/subscribe/route.ts`
 
-### Logique post-soumission (configurée dans Tally + Brevo)
+Flux séquentiel avec error handling indépendant par étape :
 
-| Profil sélectionné | Action |
+```
+POST /api/subscribe
+  ├── 1. Validation (email + intention requis)
+  ├── 2. Email transactionnel Brevo (POST /v3/smtp/email)
+  │     └── templateId selon intention (install / migrate)
+  ├── 3. Création/MàJ contact Brevo (POST /v3/contacts)
+  │     └── listIds selon intention (install / migrate)
+  ├── 4. Si bitcoin → ajout liste bitcoin (POST /v3/contacts/{email}/lists)
+  │     └── + log [BITCOIN LEAD]
+  └── 5. Retour { success: true/false }
+```
+
+### Variables d'environnement (Vercel)
+
+| Variable | Usage |
 |---|---|
-| Developer / Technical | Email Brevo → runbook .md en pièce jointe + séquence bootcamp |
-| Non-technical | Email Brevo → runbook .md en pièce jointe + séquence bootcamp |
-| Bitcoin company | Page de remerciement avec liens LinkedIn (`linkedin.com/in/manuelproquin`) + Telegram (`t.me/OrangePeel_Flow`) — pas de Calendly |
-
-### Note technique
-- Tally iframe : `frameborder="0"`, `width="100%"`, hauteur fixe ou auto
-- Pas de bordure visible, fond transparent pour s'intégrer au site
-- Le routing post-soumission se configure dans Tally (conditional redirect) + webhook Brevo
+| `BREVO_API_KEY` | Clé API Brevo |
+| `BREVO_TEMPLATE_INSTALL` | ID template email install |
+| `BREVO_TEMPLATE_MIGRATION` | ID template email migration |
+| `BREVO_LIST_INSTALL` | ID liste CRM install |
+| `BREVO_LIST_MIGRATION` | ID liste CRM migration |
+| `BREVO_LIST_BITCOIN` | ID liste CRM bitcoin |
 
 ---
 
 ## Footer
 
-### Éléments
-
 | Élément | Valeur |
 |---|---|
-| Lien 1 | `GitHub →` https://github.com/man-orangepeel/iagent |
-| Lien 2 | `OrangePeel →` https://orangepeel.fr |
-| Mention | `Built by OrangePeel · Not a SaaS · Not a framework` |
-| Optionnel | Lien LinkedIn OrangePeel |
+| Tagline | `Built by OrangePeel. Open source. Anthropic only.` |
+| Lien 1 | GitHub → github.com/man-orangepeel/iagent |
+| Lien 2 | LinkedIn → linkedin.com/in/manuelproquin |
+| Lien 3 | OrangePeel Flow → t.me/OrangePeel_Flow |
+| Copyright | `© OrangePeel. Open source under MIT License.` |
 
 ---
 
-## Navigation (sticky header optionnel)
+## Navigation (sticky header)
 
-Si header sticky : liens d'ancre uniquement.
+```
+What it does | vs OpenClaw | Get Runbook | GitHub ↗
+```
 
-| Label | Ancre |
+---
+
+## Meta / SEO
+
+| Champ | Valeur |
 |---|---|
-| What it does | `#what-it-does` |
-| vs OpenClaw | `#vs-openclaw` |
-| Get Runbook | `#get-runbook` |
-| GitHub | lien externe |
+| Title tag | `iAgent — Personal AI Agent by OrangePeel. Evolved from OpenClaw.` |
+| Meta description | `iAgent is an open source personal AI agent — zero API cost, Anthropic only. Evolved from OpenClaw. Morning briefs, documents, Gmail, Calendar. Get the free runbook.` |
+| OG Title | `iAgent by OrangePeel — Evolved from OpenClaw` |
+| OG Description | `Open source. Zero API cost. Anthropic only — no third-party intermediaries. Real agent infrastructure — not a SaaS, not a framework.` |
 
 ---
 
-## Considérations SEO minimales
+## Stack technique
 
-- Title tag : `iAgent — AI Agent Infrastructure by OrangePeel`
-- Meta description : `iAgent is a personal AI agent built without a framework. Open source, production-ready, migrated from OpenClaw. Get the free runbook.`
-- OG image : à créer (logo OrangePeel + "iAgent")
-- Pas de blog, pas de sitemap complexe — one-page
+| Composant | Technologie |
+|---|---|
+| Framework | Next.js (App Router) |
+| Hébergement | Vercel |
+| Emails transactionnels | Brevo API (v3/smtp/email) |
+| CRM / Listes | Brevo API (v3/contacts) |
+| Formulaire | Natif React (RunbookForm.tsx) |
+| Design system | Tailwind CSS, fonts Playfair Display + Orbitron |
+| Icônes | Lucide React + SVG inline (Telegram, LinkedIn) |

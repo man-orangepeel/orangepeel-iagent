@@ -1,6 +1,6 @@
 # COPY — orangepeel-iagent.fr
 > Tous les textes anglais finalisés, prêts à intégrer.
-> Dernière mise à jour : 2026-04-01
+> Dernière mise à jour : 2026-04-02
 > Ne pas modifier sans valider avec Manuel.
 
 ---
@@ -251,14 +251,15 @@ Check your inbox. The runbook is on its way.
 
 **Page post-soumission (si Bitcoin coché)**
 ```
-Nothing changes — the runbook is still on its way.
-And yes, let's talk Bitcoin.
+Ligne 1 (neutre): Nothing changes — the runbook is still on its way.
+Ligne 2 (orange, gras): And yes, let's talk Bitcoin.
+Description: OrangePeel Flow is a live pipeline powered by iAgent — Bitcoin
+             news, filtered and published daily to Telegram. See what the
+             agent can do.
+Invitation: Want to connect? Reach out on LinkedIn.
 
-OrangePeel Flow is a live pipeline powered by iAgent — Bitcoin news,
-filtered and published daily to Telegram. See what the agent can do.
-
-CTA primaire: OrangePeel Flow → t.me/OrangePeel_Flow
-CTA secondaire: LinkedIn → linkedin.com/in/manuelproquin
+CTA primaire (orange, icône Telegram): OrangePeel Flow → t.me/OrangePeel_Flow
+CTA secondaire (outline, icône LinkedIn): LinkedIn → linkedin.com/in/manuelproquin
 ```
 
 ---
