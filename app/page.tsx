@@ -142,13 +142,24 @@ export default function Home() {
           </h2>
 
           {/* Section body */}
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#f5f5f5]/80">
-            Running iAgent for the first time is an education — you understand
-            what a personal AI agent actually does when it lives on your phone
-            and your machine. Most people stop there. Some go further: custom
-            pipelines, automated workflows, domain-specific monitoring. The
-            architecture is open by design.
-          </p>
+          <div className="mx-auto mt-6 max-w-2xl">
+            <p className="text-lg italic leading-relaxed text-[#f5f5f5]/80">
+              Most people talk about AI agents.
+              <br />
+              You&rsquo;ll have one running.
+            </p>
+            <p className="mt-6 text-base leading-loose text-[#f5f5f5]/80">
+              That already puts you ahead — not because the technology is
+              complex, but because most never move from &ldquo;interesting&rdquo;
+              to &ldquo;installed.&rdquo;
+            </p>
+            <p className="mt-4 text-base leading-loose text-[#f5f5f5]/80">
+              iAgent is that move.
+              <br />
+              And for those who want to go further, the architecture is open by
+              design.
+            </p>
+          </div>
 
           {/* OrangePeel Flow — proof of work */}
           <div className="mx-auto mt-14 max-w-2xl rounded-md border border-[#ed760a]/25 bg-[#111518] p-6 text-left">
