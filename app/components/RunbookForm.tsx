@@ -106,7 +106,7 @@ export default function RunbookForm() {
       {/* First name */}
       <label className="block">
         <span className="text-sm text-[#f5f5f5]/80">
-          First name, alias, whatever works <span className="text-[#ed760a]">*</span>
+          First name <span className="text-[#ed760a]">*</span>
         </span>
         <input
           type="text"

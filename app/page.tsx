@@ -27,7 +27,7 @@ const capabilities = [
 export default function Home() {
   return (
     <>
-      {/* HERO */}
+      {/* HERO — bg #0d0d0d (default body) */}
       <section
         id="hero"
         className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden px-6 pb-12 text-center"
@@ -48,7 +48,7 @@ export default function Home() {
           </p>
 
           {/* H1 */}
-          <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-5xl leading-tight font-bold tracking-tight text-[#f5f5f5] sm:text-6xl">
+          <h1 className="mt-6 font-[family-name:var(--font-playfair)] text-5xl leading-tight font-bold tracking-tight text-[#f5f5f5]">
             OpenClaw was the idea.
             <br />
             iAgent is what it should have been.
@@ -56,9 +56,13 @@ export default function Home() {
 
           {/* Subheadline */}
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/85">
-            A personal AI agent — open, auditable, zero extra API cost — already
-            included in your Claude subscription. No black box. No third-party
-            intermediaries. Built and running in production.
+            Your personal AI agent, open and auditable.
+            <br />
+            Zero extra API cost — all included in your Claude subscription.
+            <br />
+            No black box. No third-party intermediaries.
+            <br />
+            Built and running in production.
           </p>
 
           {/* CTAs */}
@@ -87,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT IT DOES */}
+      {/* WHAT IT DOES + EXTEND — bg #111518 (single continuous section) */}
       <section id="what-it-does" className="bg-[#111518] px-6 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl">
           {/* Section label */}
@@ -97,12 +101,13 @@ export default function Home() {
 
           {/* Section headline */}
           <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
-            What iAgent does — on my machine.
+            What iAgent does — and will do for you.
           </h2>
 
           {/* Section subheadline */}
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/85">
-            This isn&rsquo;t a demo. These are automations running in production.
+            This isn&rsquo;t a demo. These are automations running in
+            production — and a runbook away from running on yours.
           </p>
 
           {/* Cards grid */}
@@ -123,86 +128,68 @@ export default function Home() {
             ))}
           </div>
 
-        </div>
-      </section>
+          {/* Divider */}
+          <div className="my-20 h-px bg-[#ed760a]/20" id="extend" />
 
-      {/* BEYOND THE BASE */}
-      <section id="extend" className="bg-[#0d0d0d] px-6 py-20 sm:py-28">
-        <div className="mx-auto max-w-5xl text-center">
-          {/* Section label */}
-          <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
-            Beyond the base
-          </p>
+          {/* ALREADY AHEAD */}
+          <div>
+            <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
+              Already ahead
+            </p>
 
-          {/* Section headline */}
-          <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
-            iAgent starts as a discovery.
-            <br />
-            It ends as your infrastructure.
-          </h2>
-
-          {/* Section body */}
-          <div className="mx-auto mt-6 max-w-2xl">
-            <p className="text-lg italic leading-relaxed text-[#f5f5f5]/80">
+            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
               Most people talk about AI agents.
               <br />
               You&rsquo;ll have one running.
-            </p>
-            <p className="mt-6 text-base leading-loose text-[#f5f5f5]/80">
-              That already puts you ahead — not because the technology is
-              complex, but because most never move from &ldquo;interesting&rdquo;
-              to &ldquo;installed.&rdquo;
-            </p>
-            <p className="mt-4 text-base leading-loose text-[#f5f5f5]/80">
-              iAgent is that move.
-              <br />
-              And for those who want to go further, the architecture is open by
-              design.
-            </p>
-          </div>
+            </h2>
 
-          {/* OrangePeel Flow — proof of work */}
-          <div className="mx-auto mt-14 max-w-2xl rounded-md border border-[#ed760a]/25 bg-[#111518] p-6 text-left">
-            <p className="font-[family-name:var(--font-orbitron)] text-xs tracking-widest uppercase text-[#ed760a]">
-              Proof of work
-            </p>
-            <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-[#f5f5f5]">
-              OrangePeel Flow
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/80">
-              A live pipeline powered by iAgent: automated scraping of selected
-              Bitcoin sources, signal filtering, content generation, and direct
-              publication to Telegram — every day, without intervention. Channel
-              in French.
-            </p>
-            <p className="mt-2 text-sm italic text-[#f5f5f5]/50">
-              One example of what you can build on top of the base agent.
-            </p>
-            <a
-              href="https://t.me/OrangePeel_Flow"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 border border-[#ed760a] px-6 py-2.5 text-sm font-medium text-[#ed760a] rounded-sm transition-colors hover:bg-[#ed760a]/10"
-            >
-              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056Zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635Z"/></svg>
-              See OrangePeel Flow on Telegram
-            </a>
-          </div>
+            <div className="mt-4 max-w-2xl">
+              <p className="text-lg leading-relaxed text-[#f5f5f5]/80">
+                That already puts you ahead — not because the technology is
+                complex, but because most never move from &ldquo;interesting&rdquo;
+                to &ldquo;installed.&rdquo;
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-[#f5f5f5]/80">
+                iAgent is that move.
+                <br />
+                And for those who want to go further, the architecture is open by
+                design.
+              </p>
+            </div>
 
-          {/* GitHub link */}
-          <a
-            href="https://github.com/man-orangepeel/iagent"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#ed760a] transition-colors hover:text-[#efa813]"
-          >
-            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            See the full source on GitHub
-          </a>
+            {/* OrangePeel Flow — proof of work */}
+            <div className="mt-14 max-w-2xl rounded-md border border-[#ed760a]/25 bg-[#0d0d0d] p-6">
+              <p className="font-[family-name:var(--font-orbitron)] text-xs tracking-widest uppercase text-[#ed760a]">
+                Proof of work
+              </p>
+              <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-[#f5f5f5]">
+                OrangePeel Flow
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/80">
+                A live pipeline powered by iAgent: automated scraping of selected
+                Bitcoin sources, signal filtering, content generation, and direct
+                publication to Telegram — every day, without intervention. Channel
+                in French.
+              </p>
+              <p className="mt-2 text-sm italic text-[#f5f5f5]/50">
+                One example of what you can build on top of the base agent.
+              </p>
+              <a
+                href="https://t.me/OrangePeel_Flow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 border border-[#ed760a] px-6 py-2.5 text-sm font-medium text-[#ed760a] rounded-sm transition-colors hover:bg-[#ed760a]/10"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056Zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635Z"/></svg>
+                See OrangePeel Flow on Telegram
+              </a>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      {/* VS OPENCLAW */}
+      {/* VS OPENCLAW — bg #0d0d0d */}
       <section id="vs-openclaw" className="px-6 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl">
           {/* Section label */}
@@ -212,14 +199,14 @@ export default function Home() {
 
           {/* Section headline */}
           <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
-            You know OpenClaw. Here&rsquo;s what changed.
+            OpenClaw had the right idea. Here&rsquo;s what we fixed.
           </h2>
 
           {/* Section subheadline */}
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#f5f5f5]/85">
-            iAgent started as an OpenClaw user&rsquo;s frustration. Same
-            philosophy — your own agent, your own data. Different execution: open
-            code, zero API cost, real security.
+          <p className="mt-4 text-lg leading-relaxed text-[#f5f5f5]/85">
+            iAgent started as an OpenClaw user&rsquo;s frustration. Same philosophy — your own agent, your own data.
+            <br />
+            Different execution: open code, zero API cost, real security.
           </p>
 
           {/* Security context */}
@@ -296,8 +283,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHO IS THIS FOR */}
-      <section id="who-is-this-for" className="px-6 py-20 sm:py-28">
+      {/* WHO IS THIS FOR — bg #111518 */}
+      <section id="who-is-this-for" className="bg-[#111518] px-6 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl">
           {/* Section label */}
           <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
@@ -317,7 +304,7 @@ export default function Home() {
           {/* 3 cards — progressive emphasis left → right */}
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {/* Card 1 — Do it yourself (most discreet) */}
-            <div className="flex flex-col rounded-md border border-white/10 bg-[#111518] p-6">
+            <div className="flex flex-col rounded-md border border-white/10 bg-[#0d0d0d] p-6">
               <h3 className="font-[family-name:var(--font-orbitron)] text-sm font-medium tracking-wide text-[#f5f5f5]">
                 I&rsquo;ll set it up myself.
               </h3>
@@ -387,8 +374,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GET THE RUNBOOK */}
-      <section id="get-runbook" className="bg-[#111518] px-6 py-20 sm:py-28">
+      {/* GET THE RUNBOOK — bg #0d0d0d */}
+      <section id="get-runbook" className="px-6 py-20 sm:py-28">
         <div className="mx-auto max-w-2xl text-center">
           {/* Section label */}
           <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
@@ -413,7 +400,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* FOOTER — bg #0d0d0d */}
       <footer className="border-t border-white/10 px-6 py-12">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
           <p className="text-sm text-[#f5f5f5]/70">
