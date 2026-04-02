@@ -128,91 +128,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Divider */}
-          <div className="my-20 h-px bg-[#ed760a]/20" id="extend" />
-
-          {/* ALREADY AHEAD */}
-          <div>
-            <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
-              Already ahead
-            </p>
-
-            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
-              Most people talk about AI agents.
-              <br />
-              You&rsquo;ll have one running.
-            </h2>
-
-            <div className="mt-4 max-w-2xl">
-              <p className="text-lg leading-relaxed text-[#f5f5f5]/80">
-                That already puts you ahead — not because the technology is
-                complex, but because most never move from &ldquo;interesting&rdquo;
-                to &ldquo;installed.&rdquo;
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-[#f5f5f5]/80">
-                iAgent is that move.
-                <br />
-                And for those who want to go further, the architecture is open by
-                design.
-              </p>
-            </div>
-
-            {/* OrangePeel Flow — proof of work */}
-            <div className="mt-14 max-w-2xl rounded-md border border-[#ed760a]/25 bg-[#0d0d0d] p-6">
-              <p className="font-[family-name:var(--font-orbitron)] text-xs tracking-widest uppercase text-[#ed760a]">
-                Proof of work
-              </p>
-              <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-[#f5f5f5]">
-                OrangePeel Flow
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/80">
-                A live pipeline powered by iAgent: automated scraping of selected
-                Bitcoin sources, signal filtering, content generation, and direct
-                publication to Telegram — every day, without intervention. Channel
-                in French.
-              </p>
-              <p className="mt-2 text-sm italic text-[#f5f5f5]/50">
-                One example of what you can build on top of the base agent.
-              </p>
-              <a
-                href="https://t.me/OrangePeel_Flow"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 border border-[#ed760a] px-6 py-2.5 text-sm font-medium text-[#ed760a] rounded-sm transition-colors hover:bg-[#ed760a]/10"
-              >
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056Zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635Z"/></svg>
-                See OrangePeel Flow on Telegram
-              </a>
-            </div>
-
-            {/* Full sovereignty */}
-            <div className="mt-8 max-w-2xl rounded-md border border-[#ed760a]/25 bg-[#0d0d0d] p-6">
-              <p className="flex items-center gap-2 font-[family-name:var(--font-orbitron)] text-xs tracking-widest uppercase text-[#ed760a]">
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Full sovereignty
-              </p>
-              <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-[#f5f5f5]">
-                Go fully offline
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/80">
-                Claude CLI is the default engine — but not the only option.
-                iAgent&rsquo;s open-source architecture allows replacing it with a
-                local LLM like Ollama (Llama 3, Mistral, etc.). Full offline. Zero
-                external dependency. Not documented yet — but the door is open.
-                Just ask Claude Code.
-              </p>
-              <a
-                href="https://ollama.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 border border-[#ed760a] px-6 py-2.5 text-sm font-medium text-[#ed760a] rounded-sm transition-colors hover:bg-[#ed760a]/10"
-              >
-                <svg className="h-4 w-4" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="true"><path d="M512 0C229.2 0 0 229.2 0 512s229.2 512 512 512 512-229.2 512-512S794.8 0 512 0zm0 256c70.7 0 128 57.3 128 128 0 47.2-25.6 88.4-63.7 110.6C672.5 522.8 736 610.4 736 712v56H288v-56c0-101.6 63.5-189.2 159.7-217.4C409.6 472.4 384 431.2 384 384c0-70.7 57.3-128 128-128z"/></svg>
-                Discover Ollama
-              </a>
-            </div>
-
-          </div>
         </div>
       </section>
 
@@ -310,9 +225,96 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHO IS THIS FOR — bg #111518 */}
-      <section id="who-is-this-for" className="bg-[#111518] px-6 py-20 sm:py-28">
+      {/* ALREADY AHEAD + WHO IS THIS FOR — bg #111518 */}
+      <section className="bg-[#111518] px-6 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl">
+          {/* ALREADY AHEAD */}
+          <div id="extend">
+            <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
+              Already ahead
+            </p>
+
+            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-[#f5f5f5] sm:text-4xl">
+              Most people talk about AI agents.
+              <br />
+              You&rsquo;ll have one running.
+            </h2>
+
+            <div className="mt-4 max-w-2xl">
+              <p className="text-lg leading-relaxed text-[#f5f5f5]/80">
+                That already puts you ahead — not because the technology is
+                complex, but because most never move from &ldquo;interesting&rdquo;
+                to &ldquo;installed.&rdquo;
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-[#f5f5f5]/80">
+                iAgent is that move.
+                <br />
+                And for those who want to go further, the architecture is open by
+                design.
+              </p>
+            </div>
+
+            {/* OrangePeel Flow — proof of work */}
+            <div className="mt-14 max-w-2xl rounded-md border border-[#ed760a]/25 bg-[#0d0d0d] p-6">
+              <p className="font-[family-name:var(--font-orbitron)] text-xs tracking-widest uppercase text-[#ed760a]">
+                Proof of work
+              </p>
+              <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-[#f5f5f5]">
+                OrangePeel Flow
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/80">
+                A live pipeline powered by iAgent: automated scraping of selected
+                Bitcoin sources, signal filtering, content generation, and direct
+                publication to Telegram — every day, without intervention. Channel
+                in French.
+              </p>
+              <p className="mt-2 text-sm italic text-[#f5f5f5]/50">
+                One example of what you can build on top of the base agent.
+              </p>
+              <a
+                href="https://t.me/OrangePeel_Flow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 border border-[#ed760a] px-6 py-2.5 text-sm font-medium text-[#ed760a] rounded-sm transition-colors hover:bg-[#ed760a]/10"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056Zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635Z"/></svg>
+                See OrangePeel Flow on Telegram
+              </a>
+            </div>
+
+            {/* Full sovereignty */}
+            <div className="mt-8 max-w-2xl rounded-md border border-[#ed760a]/25 bg-[#0d0d0d] p-6">
+              <p className="flex items-center gap-2 font-[family-name:var(--font-orbitron)] text-xs tracking-widest uppercase text-[#ed760a]">
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Full sovereignty
+              </p>
+              <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-[#f5f5f5]">
+                Go fully offline
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/80">
+                Claude CLI is the default engine — but not the only option.
+                iAgent&rsquo;s open-source architecture allows replacing it with a
+                local LLM like Ollama (Llama 3, Mistral, etc.). Full offline. Zero
+                external dependency. Not documented yet — but the door is open.
+                Just ask Claude Code.
+              </p>
+              <a
+                href="https://ollama.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 border border-[#ed760a] px-6 py-2.5 text-sm font-medium text-[#ed760a] rounded-sm transition-colors hover:bg-[#ed760a]/10"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="true"><path d="M512 0C229.2 0 0 229.2 0 512s229.2 512 512 512 512-229.2 512-512S794.8 0 512 0zm0 256c70.7 0 128 57.3 128 128 0 47.2-25.6 88.4-63.7 110.6C672.5 522.8 736 610.4 736 712v56H288v-56c0-101.6 63.5-189.2 159.7-217.4C409.6 472.4 384 431.2 384 384c0-70.7 57.3-128 128-128z"/></svg>
+                Discover Ollama
+              </a>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="my-20 h-px bg-[#ed760a]/20" />
+
+          {/* WHO IS THIS FOR */}
+          <div id="who-is-this-for">
           {/* Section label */}
           <p className="font-[family-name:var(--font-orbitron)] text-sm tracking-widest uppercase text-[#ed760a]">
             Get started
@@ -397,6 +399,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
