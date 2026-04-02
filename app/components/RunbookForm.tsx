@@ -20,7 +20,7 @@ export default function RunbookForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email || !intention) return;
+    if (!firstName || !email || !intention) return;
 
     setState("submitting");
 
@@ -105,12 +105,15 @@ export default function RunbookForm() {
     <form onSubmit={handleSubmit} className="mx-auto max-w-md text-left">
       {/* First name */}
       <label className="block">
-        <span className="text-sm text-[#f5f5f5]/80">First name</span>
+        <span className="text-sm text-[#f5f5f5]/80">
+          First name, alias, whatever works <span className="text-[#ed760a]">*</span>
+        </span>
         <input
           type="text"
+          required
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-          placeholder="Your first name"
+          placeholder="How should we call you?"
           className={`mt-2 ${inputClasses}`}
         />
       </label>

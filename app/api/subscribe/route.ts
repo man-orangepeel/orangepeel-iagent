@@ -9,9 +9,9 @@ export async function POST(request: Request) {
   try {
     const { firstName, email, intention, bitcoin } = await request.json();
 
-    if (!email || !intention) {
+    if (!firstName || !email || !intention) {
       return NextResponse.json(
-        { error: "Email and intention are required" },
+        { error: "Name, email and intention are required" },
         { status: 400 },
       );
     }
@@ -72,8 +72,9 @@ export async function POST(request: Request) {
     console.log("[BITCOIN DEBUG] bitcoin value:", bitcoin, typeof bitcoin);
     if (bitcoin === true || bitcoin === "true") {
       try {
-        const btcUrl = `https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}/lists`;
-        const btcBody = { ids: [parseInt(process.env.BREVO_LIST_BITCOIN!)] };
+        const btcListId = parseInt(process.env.BREVO_LIST_BITCOIN!);
+        const btcUrl = `https://api.brevo.com/v3/contacts/lists/${btcListId}/contacts/add`;
+        const btcBody = { emails: [email] };
         console.log("[BITCOIN DEBUG] calling:", btcUrl, JSON.stringify(btcBody));
 
         const btcRes = await fetch(btcUrl, {
