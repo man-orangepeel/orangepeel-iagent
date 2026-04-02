@@ -40,6 +40,12 @@ export default function RootLayout({
                 What it does
               </a>
               <a
+                href="#extend"
+                className="text-sm text-[#f5f5f5]/70 transition-colors hover:text-[#f5f5f5]"
+              >
+                Beyond
+              </a>
+              <a
                 href="#vs-openclaw"
                 className="text-sm text-[#f5f5f5]/70 transition-colors hover:text-[#f5f5f5]"
               >
