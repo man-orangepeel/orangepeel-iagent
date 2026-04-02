@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         templateId,
         to: [{ email, name: firstName }],
-        params: { FIRSTNAME: firstName },
+        params: { PRENOM: firstName },
       }),
     });
 
@@ -52,7 +52,7 @@ export async function POST(request: Request) {
         headers: brevoHeaders,
         body: JSON.stringify({
           email,
-          attributes: { FIRSTNAME: firstName },
+          attributes: { PRENOM: firstName },
           listIds: [listId],
           updateEnabled: true,
         }),
@@ -68,19 +68,19 @@ export async function POST(request: Request) {
       console.error("[BREVO CONTACT] unexpected error:", err);
     }
 
-    // 3. Add to bitcoin list if checked
+    // 3. Add to bitcoin list if checked (uses dedicated endpoint to avoid overwriting main list)
     if (bitcoin) {
       try {
-        const btcRes = await fetch("https://api.brevo.com/v3/contacts", {
-          method: "POST",
-          headers: brevoHeaders,
-          body: JSON.stringify({
-            email,
-            attributes: { FIRSTNAME: firstName },
-            listIds: [parseInt(process.env.BREVO_LIST_BITCOIN!)],
-            updateEnabled: true,
-          }),
-        });
+        const btcRes = await fetch(
+          `https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}/lists`,
+          {
+            method: "POST",
+            headers: brevoHeaders,
+            body: JSON.stringify({
+              ids: [parseInt(process.env.BREVO_LIST_BITCOIN!)],
+            }),
+          },
+        );
 
         if (btcRes.ok) {
           console.log("[BITCOIN LEAD]", firstName, email);
