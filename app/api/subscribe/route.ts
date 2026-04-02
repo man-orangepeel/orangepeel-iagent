@@ -69,27 +69,29 @@ export async function POST(request: Request) {
     }
 
     // 3. Add to bitcoin list if checked (uses dedicated endpoint to avoid overwriting main list)
-    if (bitcoin) {
+    console.log("[BITCOIN DEBUG] bitcoin value:", bitcoin, typeof bitcoin);
+    if (bitcoin === true || bitcoin === "true") {
       try {
-        const btcRes = await fetch(
-          `https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}/lists`,
-          {
-            method: "POST",
-            headers: brevoHeaders,
-            body: JSON.stringify({
-              ids: [parseInt(process.env.BREVO_LIST_BITCOIN!)],
-            }),
-          },
-        );
+        const btcUrl = `https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}/lists`;
+        const btcBody = { ids: [parseInt(process.env.BREVO_LIST_BITCOIN!)] };
+        console.log("[BITCOIN DEBUG] calling:", btcUrl, JSON.stringify(btcBody));
+
+        const btcRes = await fetch(btcUrl, {
+          method: "POST",
+          headers: brevoHeaders,
+          body: JSON.stringify(btcBody),
+        });
+
+        const btcText = await btcRes.text();
+        console.log("[BITCOIN API]", btcRes.status, btcText);
 
         if (btcRes.ok) {
           console.log("[BITCOIN LEAD]", firstName, email);
         } else {
-          const err = await btcRes.text();
-          console.error("[BREVO LIST] bitcoin error:", btcRes.status, err);
+          console.error("[BREVO LIST] bitcoin error:", btcRes.status, btcText);
         }
       } catch (err) {
-        console.error("[BREVO LIST] bitcoin unexpected error:", err);
+        console.error("[BITCOIN ERROR]", err);
       }
     }
 
