@@ -9,17 +9,17 @@
 
 ```
 /
-├── #hero
-├── #what-it-does         ← 4 capability cards + OrangePeel Flow proof of work
-├── #vs-openclaw           ← tableau comparatif + 2 CTA (migrate / install)
-├── #who-is-this-for       ← 3 cards progressives (DIY / Runbook / Bootcamp)
-├── #get-runbook           ← formulaire natif Next.js → API Brevo
-└── footer                 ← GitHub · LinkedIn · OrangePeel Flow
+├── #hero                  ← bg #0d0d0d
+├── #what-it-does          ← bg #111518 — 4 capability cards
+├── #vs-openclaw           ← bg #0d0d0d — tableau comparatif + 2 CTA
+├── #extend + #who-is-this-for  ← bg #111518 — Already ahead + OPF + Ollama + 3 cards Get started
+├── #get-runbook           ← bg #0d0d0d — formulaire natif Next.js → API Brevo
+└── footer                 ← bg #0d0d0d — GitHub · orangepeel.fr · LinkedIn · Telegram
 ```
 
 ---
 
-## Section 1 — Hero `#hero`
+## Section 1 — Hero `#hero` (bg #0d0d0d)
 
 **Objectif :** capter l'attention en < 5 secondes. Poser iAgent comme proof of work sérieux.
 
@@ -28,19 +28,19 @@
 | Élément | Contenu |
 |---|---|
 | Eyebrow | `Open Source · No API Cost · Anthropic Only` |
-| H1 | `OpenClaw was the idea. iAgent is what it should have been.` |
-| Subheadline | Personal AI agent, open, auditable, free with Claude subscription |
+| H1 | `OpenClaw was the idea. iAgent is the sovereign evolution.` |
+| Subheadline | 4 lignes forcées via `<br>` |
 | CTA primaire | `Get the Runbook →` → ancre `#get-runbook` |
-| CTA secondaire | `View on GitHub →` → https://github.com/man-orangepeel/iagent |
-| Signal de crédibilité | `Evolved from OpenClaw · 100% open source · Zero API cost · Anthropic only` |
+| CTA secondaire | `View on GitHub` (icône GitHub) → github.com/man-orangepeel/iagent |
+| Signal de crédibilité | `Evolved from OpenClaw · Hardened security · Zero API cost · Anthropic only` |
 
 ### Design
-- Fond sombre avec gradient radial orange en glow
-- Police Playfair pour H1, Orbitron pour eyebrow
+- Gradient radial orange en glow, réduit (400px, opacity 0.06), positionné haut (-200px)
+- Police Playfair text-5xl pour H1, Orbitron pour eyebrow
 
 ---
 
-## Section 2 — What it does `#what-it-does`
+## Section 2 — What it does `#what-it-does` (bg #111518)
 
 **Objectif :** prouver concrètement ce que l'agent fait. Proof of work visible.
 
@@ -48,27 +48,23 @@
 
 | # | Icon | Titre | Description |
 |---|---|---|---|
-| 1 | Mail | Email & Calendar | Pull unread emails, check calendar — on demand via Google |
-| 2 | Sun | Morning Brief | Structured digest every morning — agenda, emails, priorities |
+| 1 | Mail | Email & Calendar | Gmail + Google Calendar — reads, summarizes, drafts, schedules |
+| 2 | Sun | Morning Brief | Structured digest — agenda, emails, priorities. Quietly drinking your coffee. |
 | 3 | Mic | Voice | Voice message → transcription → action |
-| 4 | FileText | PDF & Documents | Document extraction and analysis, no external upload |
-
-### OrangePeel Flow — Proof of work (encart mis en valeur)
-
-Encart avec bordure orange, gradient subtil :
-- Label : `Proof of work`
-- Titre : `OrangePeel Flow`
-- Description : pipeline Bitcoin automatisé (scraping, filtrage, publication Telegram)
-- CTA : `See OrangePeel Flow on Telegram →` → https://t.me/OrangePeel_Flow
-
-### Lien bas de section
-`See the full source on GitHub →`
+| 4 | FileText | PDF & Documents | Send to Telegram iAgent, extraction + analysis |
 
 ---
 
-## Section 3 — iAgent vs OpenClaw `#vs-openclaw`
+## Section 3 — vs OpenClaw `#vs-openclaw` (bg #0d0d0d)
 
 **Objectif :** capturer le trafic OpenClaw, montrer l'évolution.
+
+### Headline
+`OpenClaw had the right idea. Here's what we fixed.`
+
+### Subheadline (forced line break)
+`iAgent started as an OpenClaw user's frustration. Same philosophy — your own agent, your own data.`
+`Different execution: open code, zero API cost, real security.`
 
 ### Tableau comparatif (7 lignes)
 
@@ -88,21 +84,47 @@ Encart avec bordure orange, gradient subtil :
 
 ---
 
-## Section 4 — Who is this for `#who-is-this-for`
+## Section 4 — Already ahead + Who is this for (bg #111518)
 
-**Objectif :** 3 niveaux d'engagement progressifs.
+Section unique avec divider orange entre les deux blocs.
 
-### 3 cards (emphase croissante gauche → droite)
+### Already ahead `#extend`
+
+- Label : `Already ahead`
+- Headline : `Most people talk about AI agents. You'll have one running.`
+- Body : text about moving from "interesting" to "installed"
+
+#### OrangePeel Flow (card, bg #0d0d0d, border orange)
+- Label : `Proof of work`
+- Titre : `OrangePeel Flow`
+- Description : pipeline Bitcoin automatisé, channel in French
+- CTA (icône Telegram) : `See OrangePeel Flow on Telegram →`
+
+#### Full sovereignty (card, bg #0d0d0d, border orange)
+- Label (icône bouclier) : `Full sovereignty`
+- Titre : `Go fully offline`
+- Description : remplacement Claude CLI par Ollama, full offline, open source
+- CTA : `Discover Ollama →` → ollama.com
+
+### Divider orange (1px, opacity 20%)
+
+### Who is this for `#who-is-this-for`
+
+- Label : `Get started`
+- Headline : `Three ways in.`
+- Subheadline : `All you need: a Mac and a Claude subscription.`
+
+#### 3 cards (emphase croissante gauche → droite)
 
 | Card | Titre | CTA | Style |
 |---|---|---|---|
-| A — DIY | I'll set it up myself. | `Read the guide →` (lien GitHub) | Discret, border white/10 |
-| B — Runbook | I want it automated. | `Get the Runbook →` (ancre) | Intermédiaire, border orange |
+| A — DIY | I'll set it up myself. | `Read the guide →` (lien GitHub) | Discret, bg #0d0d0d |
+| B — Runbook | I want it automated. | `Get the Runbook →` (ancre) | Intermédiaire, border orange, gradient |
 | C — Bootcamp | I want something more powerful. | `Discover the Bootcamp →` (lien externe) | Prominent, fond sombre doré |
 
 ---
 
-## Section 5 — Get the Runbook `#get-runbook`
+## Section 5 — Get the Runbook `#get-runbook` (bg #0d0d0d)
 
 **Objectif :** collecter email + qualifier le profil. Point de conversion unique.
 
@@ -110,7 +132,7 @@ Encart avec bordure orange, gradient subtil :
 
 | Champ | Type | Requis |
 |---|---|---|
-| First name | text | non |
+| First name | text | oui |
 | Email address | email | oui |
 | I want to... | radio (install / migrate) | oui |
 | Bitcoin | checkbox | non |
@@ -121,46 +143,46 @@ Encart avec bordure orange, gradient subtil :
   - `And yes, let's talk Bitcoin.` (en orange, gras)
   - Description OrangePeel Flow
   - `Want to connect? Reach out on LinkedIn.`
-  - CTA primaire : `OrangePeel Flow` (icône Telegram) → t.me/OrangePeel_Flow
-  - CTA secondaire : `LinkedIn` (icône LinkedIn) → linkedin.com/in/manuelproquin
+  - CTA primaire : `OrangePeel Flow` (icône Telegram)
+  - CTA secondaire : `LinkedIn` (icône LinkedIn)
 
 ### Backend — API route `app/api/subscribe/route.ts`
 
-Flux séquentiel avec error handling indépendant par étape :
-
 ```
 POST /api/subscribe
-  ├── 1. Validation (email + intention requis)
+  ├── 1. Validation (firstName + email + intention requis)
   ├── 2. Email transactionnel Brevo (POST /v3/smtp/email)
   │     └── templateId selon intention (install / migrate)
+  │     └── params: { PRENOM: firstName }
   ├── 3. Création/MàJ contact Brevo (POST /v3/contacts)
-  │     └── listIds selon intention (install / migrate)
-  ├── 4. Si bitcoin → ajout liste bitcoin (POST /v3/contacts/{email}/lists)
+  │     └── listIds selon intention, attributes: { PRENOM: firstName }
+  ├── 4. Si bitcoin → ajout liste bitcoin (POST /v3/contacts/lists/{listId}/contacts/add)
   │     └── + log [BITCOIN LEAD]
   └── 5. Retour { success: true/false }
 ```
 
 ### Variables d'environnement (Vercel)
 
-| Variable | Usage |
-|---|---|
-| `BREVO_API_KEY` | Clé API Brevo |
-| `BREVO_TEMPLATE_INSTALL` | ID template email install |
-| `BREVO_TEMPLATE_MIGRATION` | ID template email migration |
-| `BREVO_LIST_INSTALL` | ID liste CRM install |
-| `BREVO_LIST_MIGRATION` | ID liste CRM migration |
-| `BREVO_LIST_BITCOIN` | ID liste CRM bitcoin |
+| Variable | Usage | Valeur |
+|---|---|---|
+| `BREVO_API_KEY` | Clé API Brevo | — |
+| `BREVO_TEMPLATE_INSTALL` | ID template email install | 1 |
+| `BREVO_TEMPLATE_MIGRATION` | ID template email migration | 2 |
+| `BREVO_LIST_INSTALL` | ID liste CRM install | 3 |
+| `BREVO_LIST_MIGRATION` | ID liste CRM migration | 4 |
+| `BREVO_LIST_BITCOIN` | ID liste CRM bitcoin | 5 |
 
 ---
 
-## Footer
+## Footer (bg #0d0d0d)
 
 | Élément | Valeur |
 |---|---|
 | Tagline | `Built by OrangePeel. Open source. Anthropic only.` |
-| Lien 1 | GitHub → github.com/man-orangepeel/iagent |
-| Lien 2 | LinkedIn → linkedin.com/in/manuelproquin |
-| Lien 3 | OrangePeel Flow → t.me/OrangePeel_Flow |
+| Lien 1 | GitHub (icône SVG) → github.com/man-orangepeel/iagent |
+| Lien 2 | orangepeel.fr (texte) → orangepeel.fr |
+| Lien 3 | LinkedIn (icône SVG) → linkedin.com/in/manuelproquin |
+| Lien 4 | OrangePeel Flow (icône Telegram SVG) → t.me/OrangePeel_Flow |
 | Copyright | `© OrangePeel. Open source under MIT License.` |
 
 ---
@@ -168,7 +190,7 @@ POST /api/subscribe
 ## Navigation (sticky header)
 
 ```
-What it does | vs OpenClaw | Get Runbook | GitHub ↗
+What it does | vs OpenClaw | Get Runbook | GitHub (icône SVG)
 ```
 
 ---
@@ -177,10 +199,10 @@ What it does | vs OpenClaw | Get Runbook | GitHub ↗
 
 | Champ | Valeur |
 |---|---|
-| Title tag | `iAgent — Personal AI Agent by OrangePeel. Evolved from OpenClaw.` |
-| Meta description | `iAgent is an open source personal AI agent — zero API cost, Anthropic only. Evolved from OpenClaw. Morning briefs, documents, Gmail, Calendar. Get the free runbook.` |
-| OG Title | `iAgent by OrangePeel — Evolved from OpenClaw` |
-| OG Description | `Open source. Zero API cost. Anthropic only — no third-party intermediaries. Real agent infrastructure — not a SaaS, not a framework.` |
+| Title tag | `iAgent — Personal AI Agent Infrastructure by OrangePeel` |
+| Meta description | `iAgent is a personal AI agent built without a framework — morning briefs, PDF processing, Bitcoin signal filtering. Open source. Evolved from OpenClaw. Get the free runbook.` |
+| OG Title | `iAgent by OrangePeel` |
+| OG Description | `Real AI agent infrastructure. No framework. No SaaS. Anthropic only — no third-party intermediaries.` |
 
 ---
 
@@ -188,10 +210,10 @@ What it does | vs OpenClaw | Get Runbook | GitHub ↗
 
 | Composant | Technologie |
 |---|---|
-| Framework | Next.js (App Router) |
+| Framework | Next.js 16 (App Router) |
 | Hébergement | Vercel |
 | Emails transactionnels | Brevo API (v3/smtp/email) |
-| CRM / Listes | Brevo API (v3/contacts) |
+| CRM / Listes | Brevo API (v3/contacts, v3/contacts/lists) |
 | Formulaire | Natif React (RunbookForm.tsx) |
-| Design system | Tailwind CSS, fonts Playfair Display + Orbitron |
-| Icônes | Lucide React + SVG inline (Telegram, LinkedIn) |
+| Design system | Tailwind CSS, fonts Playfair Display + Orbitron + Inter Tight |
+| Icônes | Lucide React + SVG inline (GitHub, Telegram, LinkedIn, Shield) |

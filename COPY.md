@@ -15,13 +15,15 @@ Open Source · No API Cost · Anthropic Only
 **H1**
 ```
 OpenClaw was the idea.
-iAgent is what it should have been.
+iAgent is the sovereign evolution.
 ```
 
 **Subheadline**
 ```
-A personal AI agent — open, auditable, free to run if you already have Claude Pro or Max.
-No black box. No third-party intermediaries. Built and running in production.
+Your personal AI agent, open and auditable.
+Zero extra API cost — all included in your Claude subscription.
+No black box. No third-party intermediaries.
+Built and running in production.
 ```
 
 **CTA primaire**
@@ -29,14 +31,14 @@ No black box. No third-party intermediaries. Built and running in production.
 Get the Runbook →
 ```
 
-**CTA secondaire**
+**CTA secondaire (icône GitHub)**
 ```
 View on GitHub →
 ```
 
 **Signal de crédibilité**
 ```
-Evolved from OpenClaw · 100% open source · Zero API cost · Anthropic only
+Evolved from OpenClaw · Hardened security · Zero API cost · Anthropic only
 ```
 
 ---
@@ -50,30 +52,32 @@ In production — every day
 
 **Section headline**
 ```
-What iAgent does — on my machine.
+What iAgent does — and will do for you.
 ```
 
 **Section subheadline**
 ```
-This isn't a demo. These are automations running in production.
+This isn't a demo. These are automations running in production
+— and a runbook away from running on yours.
 ```
 
-**Card 1 — Email & Calendar (haut-gauche)**
+**Card 1 — Email & Calendar**
 ```
 Title: Email & Calendar
-Body: Ask iAgent to pull your unread emails or check your calendar.
-      On demand, authenticated via Google — no data stored externally.
+Body: Connected to Gmail and Google Calendar, iAgent reads, summarizes,
+      drafts replies, prepares new emails for review, and checks your
+      schedule — on demand, no switching apps.
 ```
 
-**Card 2 — Morning Brief (haut-droite)**
+**Card 2 — Morning Brief**
 ```
 Title: Morning Brief
 Body: Every morning, a structured digest on your phone —
-      agenda, unread emails, priorities. Before you open your laptop.
+      agenda, unread emails, priorities. Quietly drinking your coffee.
       Scheduling and reminders are configurable.
 ```
 
-**Card 3 — Voice (bas-gauche)**
+**Card 3 — Voice**
 ```
 Title: Voice
 Body: Send a voice message instead of typing.
@@ -81,49 +85,30 @@ Body: Send a voice message instead of typing.
       the same way it would with text.
 ```
 
-**Card 4 — Documents (bas-droite)**
+**Card 4 — PDF & Documents**
 ```
 Title: PDF & Documents
-Body: Send a document. Get the content extracted and analyzed.
-      No manual copy-paste, no upload to external services.
-```
-
-**Note bas de section**
-```
-iAgent is a foundation — not a finished product.
-The architecture is open — build what fits your context.
-```
-
-**Proof of work — OrangePeel Flow**
-```
-Label: Proof of work
-Title: OrangePeel Flow
-Body: A live pipeline powered by iAgent: automated scraping of selected
-      Bitcoin sources, signal filtering, content generation, and direct
-      publication to Telegram — every day, without intervention.
-      Channel in French. One example of what you can build on top of the base agent.
-CTA: See OrangePeel Flow on Telegram →
-Link: https://t.me/OrangePeel_Flow
-```
-
-**Lien bas de section**
-```
-See the full source on GitHub →
+Body: Send a document to your Telegram iAgent. Get the content extracted
+      and analyzed. No manual copy-paste, no upload to external services.
 ```
 
 ---
 
 ## VS OPENCLAW
 
+**Section label**
+```
+vs OpenClaw
+```
+
 **Section headline**
 ```
-You know OpenClaw. Here's what changed.
+OpenClaw had the right idea. Here's what we fixed.
 ```
 
 **Section subheadline**
 ```
-iAgent started as an OpenClaw user's frustration.
-Same philosophy — your own agent, your own data.
+iAgent started as an OpenClaw user's frustration. Same philosophy — your own agent, your own data.
 Different execution: open code, zero API cost, real security.
 ```
 
@@ -137,7 +122,7 @@ and a full security audit runs in one command.
 **Tableau comparatif**
 ```
 Feature            | OpenClaw                          | iAgent
-LLM cost           | Paid API keys (per token)         | Zero — uses your Claude Pro/Max subscription
+LLM cost           | Paid API keys (per token)         | Zero — uses your Claude subscription
 Code               | Closed (macOS app + Node.js)      | 100% open, Python, readable line by line
 Data routing       | Transits OpenClaw servers + third parties | Anthropic only — no additional intermediaries
 Security           | Black box, past incidents          | Audit-ready: 35 checks, whitelisted commands
@@ -160,7 +145,60 @@ CTA: Get started →
 
 ---
 
+## ALREADY AHEAD
+
+**Section label**
+```
+Already ahead
+```
+
+**Section headline**
+```
+Most people talk about AI agents.
+You'll have one running.
+```
+
+**Body**
+```
+That already puts you ahead — not because the technology is complex,
+but because most never move from "interesting" to "installed."
+
+iAgent is that move.
+And for those who want to go further, the architecture is open by design.
+```
+
+**Proof of work — OrangePeel Flow (card)**
+```
+Label: Proof of work
+Title: OrangePeel Flow
+Body: A live pipeline powered by iAgent: automated scraping of selected
+      Bitcoin sources, signal filtering, content generation, and direct
+      publication to Telegram — every day, without intervention.
+      Channel in French.
+Sous-texte (italique): One example of what you can build on top of the base agent.
+CTA (icône Telegram): See OrangePeel Flow on Telegram → t.me/OrangePeel_Flow
+```
+
+**Full sovereignty (card)**
+```
+Label (icône bouclier): Full sovereignty
+Title: Go fully offline
+Body: Claude CLI is the default engine — but not the only option.
+      iAgent's open-source architecture allows replacing it with a local
+      LLM like Ollama (Llama 3, Mistral, etc.). Full offline. Zero external
+      dependency. Not documented yet — but the door is open.
+      Just ask Claude Code.
+CTA: Discover Ollama → ollama.com
+```
+
+---
+
 ## WHO IS THIS FOR
+
+**Section label**
+```
+Get started
+```
 
 **Section headline**
 ```
@@ -169,16 +207,13 @@ Three ways in.
 
 **Section subheadline**
 ```
-All you need: a Mac and a Claude Pro or Max subscription.
+All you need: a Mac and a Claude subscription.
 ```
 
 **Card A — Do it yourself**
 ```
 Title: I'll set it up myself.
-
-Body: The install guide is in the public repo.
-      Step-by-step, no automation required.
-
+Body: The install guide is in the public repo. Step-by-step, no automation required.
 CTA: Read the guide →
 Link: https://github.com/man-orangepeel/iagent/blob/main/docs/install/guide-installation.md
 ```
@@ -186,21 +221,16 @@ Link: https://github.com/man-orangepeel/iagent/blob/main/docs/install/guide-inst
 **Card B — Guided install (runbook)**
 ```
 Title: I want it automated.
-
-Body: Get the runbook — Claude Code handles the setup.
-      You validate the key steps. That's it.
-
+Body: Get the runbook — Claude Code handles the setup. You validate the key steps. That's it.
 CTA: Get the Runbook →
 Link: #get-runbook
 ```
 
 **Card C — Bootcamp**
 ```
-Title: I want something more powerful, tailored to my work.
-
-Body: The AI Chief of Staff Bootcamp (Neon&Slate) guides you in 4 weeks —
-      emails, meetings, notes, content — no technical background required.
-
+Title: I want something more powerful.
+Body: The AI Chief of Staff Bootcamp guides you in 4 weeks. Custom to your role,
+      your tools, your context. No technical background required.
 CTA: Discover the Bootcamp →
 Link: https://aichiefofstaffbootcamp.netlify.app/
 ```
@@ -209,6 +239,11 @@ Link: https://aichiefofstaffbootcamp.netlify.app/
 
 ## GET THE RUNBOOK
 
+**Section label**
+```
+Runbook
+```
+
 **Section headline**
 ```
 Get the Runbook. It's free.
@@ -216,20 +251,19 @@ Get the Runbook. It's free.
 
 **Section subheadline**
 ```
-Claude Code installs iAgent for you — step by step.
-Enter your email. Receive the runbook. Open it with Claude Code.
+Claude Code installs iAgent for you — step by step. Enter your email.
+Receive the runbook. Open it with Claude Code.
 ```
 
 **Formulaire — labels**
 ```
-Field 1: First name
-Field 2: Email address
-Field 3: I want to...
+Field 1: First name (requis)
+Field 2: Email address (requis)
+Field 3: I want to... (requis)
   Option A: Install iAgent from scratch
   Option B: Migrate from OpenClaw
 
-Field 4 (optionnel) : 
-  Label: "Bitcoin?"
+Field 4 (optionnel) :
   Checkbox: "I'm into Bitcoin — happy to connect on that too"
 ```
 
@@ -240,8 +274,7 @@ Send me the Runbook →
 
 **Mention légale**
 ```
-No spam. One runbook. Occasional updates on iAgent and related resources.
-Unsubscribe anytime.
+No spam. One runbook. Occasional updates on iAgent and related resources. Unsubscribe anytime.
 ```
 
 **Message post-soumission**
@@ -249,13 +282,13 @@ Unsubscribe anytime.
 Check your inbox. The runbook is on its way.
 ```
 
-**Page post-soumission (si Bitcoin coché)**
+**Post-soumission (si Bitcoin coché)**
 ```
 Ligne 1 (neutre): Nothing changes — the runbook is still on its way.
 Ligne 2 (orange, gras): And yes, let's talk Bitcoin.
-Description: OrangePeel Flow is a live pipeline powered by iAgent — Bitcoin
-             news, filtered and published daily to Telegram. Channel in
-             French. See what the agent can do.
+Description: OrangePeel Flow is a live pipeline powered by iAgent — Bitcoin news,
+             filtered and published daily to Telegram. Channel in French.
+             See what the agent can do.
 Invitation: Want to connect? Reach out on LinkedIn.
 
 CTA primaire (orange, icône Telegram): OrangePeel Flow → t.me/OrangePeel_Flow
@@ -273,9 +306,10 @@ Built by OrangePeel. Open source. Anthropic only.
 
 **Liens**
 ```
-GitHub — github.com/man-orangepeel/iagent
-LinkedIn — linkedin.com/in/manuelproquin
-OrangePeel Flow — t.me/OrangePeel_Flow
+GitHub (icône) — github.com/man-orangepeel/iagent
+orangepeel.fr (texte) — orangepeel.fr
+LinkedIn (icône) — linkedin.com/in/manuelproquin
+OrangePeel Flow (icône Telegram) — t.me/OrangePeel_Flow
 ```
 
 **Copyright**
@@ -314,7 +348,7 @@ Real agent infrastructure — not a SaaS, not a framework.
 ## NAVIGATION
 
 ```
-What it does | vs OpenClaw | Get Runbook | GitHub ↗
+What it does | vs OpenClaw | Get Runbook | GitHub (icône)
 ```
 
 ---
@@ -326,4 +360,4 @@ What it does | vs OpenClaw | Get Runbook | GitHub ↗
 - Anthropic = seul tiers mentionné, présenté comme un fait, pas un avantage marketing
 - Bitcoin = signal d'intérêt, pas promesse produit — évolutivité comme angle principal
 - "Whisper", "launchd", "pdftotext" → README du repo uniquement, pas sur le site
-- Les prérequis : "Mac + Claude Pro ou Max" — point final
+- Les prérequis : "Mac + Claude subscription" — point final
