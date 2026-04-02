@@ -70,21 +70,20 @@ export async function POST(request: Request) {
 
     // 3. Add to bitcoin list if checked
     if (bitcoin) {
-      console.log("[BITCOIN LEAD]", firstName, email);
-
       try {
-        const btcListId = parseInt(process.env.BREVO_LIST_BITCOIN!);
-        const btcRes = await fetch(
-          `https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}/lists`,
-          {
-            method: "POST",
-            headers: brevoHeaders,
-            body: JSON.stringify({ ids: [btcListId] }),
-          },
-        );
+        const btcRes = await fetch("https://api.brevo.com/v3/contacts", {
+          method: "POST",
+          headers: brevoHeaders,
+          body: JSON.stringify({
+            email,
+            attributes: { FIRSTNAME: firstName },
+            listIds: [parseInt(process.env.BREVO_LIST_BITCOIN!)],
+            updateEnabled: true,
+          }),
+        });
 
         if (btcRes.ok) {
-          console.log("[BREVO LIST] bitcoin list added", email);
+          console.log("[BITCOIN LEAD]", firstName, email);
         } else {
           const err = await btcRes.text();
           console.error("[BREVO LIST] bitcoin error:", btcRes.status, err);

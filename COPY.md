@@ -101,7 +101,7 @@ Title: OrangePeel Flow
 Body: A live pipeline powered by iAgent: automated scraping of selected
       Bitcoin sources, signal filtering, content generation, and direct
       publication to Telegram — every day, without intervention.
-      One example of what you can build on top of the base agent.
+      Channel in French. One example of what you can build on top of the base agent.
 CTA: See OrangePeel Flow on Telegram →
 Link: https://t.me/OrangePeel_Flow
 ```
@@ -254,8 +254,8 @@ Check your inbox. The runbook is on its way.
 Ligne 1 (neutre): Nothing changes — the runbook is still on its way.
 Ligne 2 (orange, gras): And yes, let's talk Bitcoin.
 Description: OrangePeel Flow is a live pipeline powered by iAgent — Bitcoin
-             news, filtered and published daily to Telegram. See what the
-             agent can do.
+             news, filtered and published daily to Telegram. Channel in
+             French. See what the agent can do.
 Invitation: Want to connect? Reach out on LinkedIn.
 
 CTA primaire (orange, icône Telegram): OrangePeel Flow → t.me/OrangePeel_Flow

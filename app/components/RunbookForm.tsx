@@ -62,8 +62,8 @@ export default function RunbookForm() {
             </p>
             <p className="mt-3 text-sm leading-relaxed text-[#f5f5f5]/60">
               OrangePeel Flow is a live pipeline powered by iAgent — Bitcoin
-              news, filtered and published daily to Telegram. See what the
-              agent can do.
+              news, filtered and published daily to Telegram. Channel in
+              French. See what the agent can do.
             </p>
             <p className="mt-2 text-sm text-[#f5f5f5]/50">
               Want to connect? Reach out on LinkedIn.
